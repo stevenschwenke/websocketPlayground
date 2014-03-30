@@ -61,5 +61,4 @@ public class Client {
 			return this.closeLatch.await(duration, unit);
 		}
 	}
-
 }

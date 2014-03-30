@@ -22,7 +22,8 @@ public class MyWebSocketHandler {
 
 	@OnWebSocketConnect
 	public void onConnect(Session session) {
-		System.out.println("New connection from " + session.getRemoteAddress().getAddress() + ", sending welcome message");
+		System.out.println("New connection from " + session.getRemoteAddress().getAddress() + ":" + session.getRemoteAddress().getPort()
+				+ ", sending welcome message");
 		try {
 			session.getRemote().sendString("Welcome!");
 		} catch (IOException e) {
